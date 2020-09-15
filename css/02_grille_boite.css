@@ -1,47 +1,166 @@
-body{
-    background-color: #fff;
-    font-family: 'Montserrat', sans-serif;
+* {
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+}
+
+
+body {
+    background-color: rgba(230, 225, 225, 0.24);
+    /* sticky */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* color: #fff; */
 }
 
 header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(166, 45, 190);
+    text-align: center;
+    flex-grow: 0;
+    height: 100px;
+    min-height: 4rem;
+    background-color: rgb(166, 45, 190);
+    color: #fff;
+  
+}
+
+header div a {
+    /* background-color: #000; */
+    text-decoration: underline;
+    font-style: italic;
+    color: #fff;
+    font-size: 20px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+.content {
+    /* width: 1000px; */
+    margin: 0 auto;
+    padding: 20px;
+    /* Sticky footer */
+    flex: 1;
+}
+
+/* Basic footer styles */
+footer {
+    width: 100%;
+    background: rgb(175, 77, 159);
+    margin-top: 1.5rem;
+   /* Sticky footer */
+    flex-shrink: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(166, 45, 190);
+}
+
+h1, p {
+    margin: 1rem 0;
+}
+
+ul {
+    padding: 1.25rem;
     text-align: center;
 }
 
-/* Classe couleur et texte centré */
-.vert {
-    background-color: rgba(59, 161, 59, 0.644);
+ul li {
+    list-style-type: none;
+    /* display: inline-block; */
+    flex-direction: column;
+    margin: 0.25rem 0.75rem;
+}
+
+ul a {
     color: #fff;
-    text-align: center;
+    text-decoration: none;
+}
+
+ul a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* .container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    height: 100vh;
+} */
+
+
+.content {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+footer {
+    flex-grow: 0;
+    width: 100%;
+    height: 20px;
+    min-height: 4rem;
+    background: rgb(129, 124, 124);
+}
+
+footer li {
+    display: inline-block;
+}
+
+/* l'élement menu est flex pour séparer les enfants de manière égale */
+#menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    width: 1000px;
+    background-color: grey;
+    color: #fff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+ 
 }
 
 /* le conteneur principal */
-.conteneur {
+/* .conteneur {
     margin: auto;
     background-color: #fff;
     width: 1000px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
+} */
 
-main {
-    flex: 1;
-}
 
-footer {
-    flex-shrink: 0;
-}
 
-/* pour la navigation */
-nav {
-    height: 80px;
-    margin-bottom: 10px;
-}
-/* l'élement menu est flex pour séparer les enfants de manière égale */
-#menu {
-    display: flex;
-    justify-content: space-evenly;
-}
+
 
 
 /* Définition de la largeur des colonnes en pourcentage */
@@ -168,11 +287,15 @@ nav {
         background-color: #fff;
     }
 
-    .conteneur {
+    main {
+        width: 320px;
+    }
+
+    #conteneur {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        background: yellow;
+        background: rgba(194, 27, 216, 0.637);
 
     }
 
@@ -201,7 +324,11 @@ nav {
         background-color: #fff;
     }
 
-    .conteneur {
+    main {
+        width: 370px;
+    }
+
+    #conteneur {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -241,11 +368,15 @@ nav {
         background: #fff;
     }
 
-    .conteneur {
+    main {
+        width: 800px;
+    }
+
+    #conteneur {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        background-color: rgba(154, 218, 240, 0.507);
+        background-color: rgba(55, 167, 204, 0.507);
     }
 }
 
@@ -255,10 +386,14 @@ nav {
 @media (min-width: 1097px) {
 
   
-    .conteneur {
+    #conteneur {
         background-color:rgba(241, 224, 65, 0.623);
-        width: 1200px;
+        width: 100%;
         margin: 0 auto;
         border: 1px solid #000;
+        margin-top: 30px;
     }
 }
+
+
+
